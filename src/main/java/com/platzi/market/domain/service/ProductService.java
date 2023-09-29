@@ -36,4 +36,13 @@ public class ProductService {
             return true;
         }).orElse(false);
     }
+//    public Product update(Product product) {
+//        return productRepository.update(product);
+//    }
+
+    public Product updateProduct(int id, Product product){
+        return productRepository.updateProduct(id, product);
+
+    }
+
 }
