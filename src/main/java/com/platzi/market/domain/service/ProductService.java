@@ -30,6 +30,11 @@ public class ProductService {
         return productRepository.save(product);
     }
 
+    public Product updateProduct(int id, Product product){
+        return productRepository.updateProduct(id, product);
+
+    }
+
     public boolean delete(int productId) {
         return getProduct(productId).map(product -> {
             productRepository.delete(productId);
@@ -39,10 +44,5 @@ public class ProductService {
 //    public Product update(Product product) {
 //        return productRepository.update(product);
 //    }
-
-    public Product updateProduct(int id, Product product){
-        return productRepository.updateProduct(id, product);
-
-    }
 
 }

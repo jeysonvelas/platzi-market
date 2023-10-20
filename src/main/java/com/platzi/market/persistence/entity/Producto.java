@@ -100,4 +100,11 @@ public class Producto {
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
     }
+
+    public List<ComprasProducto> getProductos() {
+        return productos;
+    }
+    public void setProductos(List<ComprasProducto> productos) {
+        this.productos = productos;
+    }
 }
