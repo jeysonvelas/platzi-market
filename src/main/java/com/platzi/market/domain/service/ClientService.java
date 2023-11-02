@@ -24,7 +24,6 @@ public class ClientService {
 
     public Client save(Client client){
         return clientReporsitory.save(client);
-
     }
 
     public Client updateClient(String clientId, Client client){
