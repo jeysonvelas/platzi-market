@@ -104,6 +104,7 @@ public class Producto {
     public List<ComprasProducto> getProductos() {
         return productos;
     }
+
     public void setProductos(List<ComprasProducto> productos) {
         this.productos = productos;
     }
