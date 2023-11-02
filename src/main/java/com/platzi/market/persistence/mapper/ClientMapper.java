@@ -12,14 +12,13 @@ import java.util.List;
 @Mapper(componentModel = "spring")
 public interface ClientMapper {
 
-    @Mappings({
-            @Mapping(source = "id", target = "clientId"),
-            @Mapping(source = "nombre", target = "name"),
-            @Mapping(source = "apeliidos", target = "lastName"),
-            @Mapping(source = "celular", target = "cellphone"),
-            @Mapping(source = "direccion", target = "address"),
-            @Mapping(source = "correoElectronico", target = "email"),
-    })
+
+    @Mapping(source = "id", target = "clientId")
+    @Mapping(source = "nombre", target = "name")
+    @Mapping(source = "apeliidos", target = "lastName")
+    @Mapping(source = "celular", target = "cellphone")
+    @Mapping(source = "direccion", target = "address")
+    @Mapping(source = "correoElectronico", target = "email")
     Client toClient (Cliente cliente);
 
     List<Client> toClients(List<Cliente> clientes);
