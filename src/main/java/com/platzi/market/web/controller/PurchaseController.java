@@ -1,6 +1,7 @@
 package com.platzi.market.web.controller;
 
 import com.platzi.market.domain.dto.Purchase;
+import com.platzi.market.domain.repository.CompraCrudRepository;
 import com.platzi.market.domain.service.PurchaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -31,4 +32,10 @@ public class PurchaseController {
     public ResponseEntity<Purchase> save(@RequestBody Purchase purchase) {
         return new ResponseEntity<>(purchaseService.save(purchase), HttpStatus.CREATED);
     }
+
+    @GetMapping("/consulta")
+    public List<Object[]> getFindAllPurchases() {
+        return purchaseService.findAllPurchases();
+    }
+
 }

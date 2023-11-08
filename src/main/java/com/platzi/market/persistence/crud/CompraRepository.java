@@ -6,6 +6,7 @@ import com.platzi.market.domain.repository.PurchaseRepository;
 import com.platzi.market.persistence.entity.Compra;
 import com.platzi.market.persistence.mapper.PurchaseMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -37,4 +38,11 @@ public class CompraRepository implements PurchaseRepository {
 
         return purchaseMapper.toPurchase(compraCrudRepository.save(compra));
     }
+
+    @Override
+    public List<Object[]> getFindAllPurchases(){
+        return compraCrudRepository.findAllPurchases();
+    }
+
+
 }

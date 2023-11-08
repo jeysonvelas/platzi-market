@@ -2,6 +2,7 @@ package com.platzi.market.domain.service;
 
 import com.platzi.market.domain.dto.Purchase;
 import com.platzi.market.domain.repository.PurchaseRepository;
+import com.platzi.market.persistence.crud.CompraRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,6 +25,12 @@ public class PurchaseService {
 
     public Purchase save(Purchase purchase){
         return purchaseRepository.save(purchase);
+    }
+
+    public List<Object[]> findAllPurchases() {
+
+        return purchaseRepository.getFindAllPurchases();
+
     }
 
 }
