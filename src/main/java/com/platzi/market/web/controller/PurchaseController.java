@@ -33,7 +33,7 @@ public class PurchaseController {
         return new ResponseEntity<>(purchaseService.save(purchase), HttpStatus.CREATED);
     }
 
-    @GetMapping("/consulta")
+    @GetMapping("/consult")
     public List<Object[]> getFindAllPurchases() {
         return purchaseService.findAllPurchases();
     }

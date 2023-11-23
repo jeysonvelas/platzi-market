@@ -11,8 +11,6 @@ import java.util.List;
 
 @Mapper(componentModel = "spring")
 public interface ClientMapper {
-
-
     @Mapping(source = "id", target = "clientId")
     @Mapping(source = "nombre", target = "name")
     @Mapping(source = "apeliidos", target = "lastName")
@@ -20,9 +18,7 @@ public interface ClientMapper {
     @Mapping(source = "direccion", target = "address")
     @Mapping(source = "correoElectronico", target = "email")
     Client toClient (Cliente cliente);
-
     List<Client> toClients(List<Cliente> clientes);
-
     @InheritInverseConfiguration
     @Mapping(target = "compras" , ignore = true)
     Cliente toCliente(Client client);
